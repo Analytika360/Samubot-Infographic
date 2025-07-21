@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: SamuBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- 
+    Palette Name: Energetic & Playful
+    HEX Codes: #FF5733, #33FF57, #3357FF, #FF33A1, #F1C40F
+    Background: #1a202c (gray-900), Text: #f7fafc (gray-100)
+    -->
+    <!-- 
+    Narrative Plan:
+    1.  Introduction/Hook: Present the problem of campaign disconnection and introduce SamuBot as the modern solution.
+    2.  Problem/Solution: Detail the specific problems SamuBot addresses.
+    3.  Core Benefits Analysis: Visualize the key benefits using a donut chart to show a complete value proposition.
+    4.  Future Potential: Display the growth areas with a bar chart to compare their impact.
+    5.  Strategic Flow: Conclude with a flow diagram showing the strategic path from the tool to campaign victory.
+    -->
+    <!-- 
+    Visualization Choices:
+    1.  Problem Definition (¿Qué Problemas Resuelve?): Goal: Organize. Visualization: Styled HTML cards with Unicode icons. Justification: Clear, scannable separation of problems. Method: HTML/Tailwind CSS. NO SVG.
+    2.  Core Benefits (Beneficios Clave): Goal: Compare/Inform. Visualization: Donut Chart. Justification: Shows how individual benefits form a complete value proposition. Library: Chart.js. NO SVG.
+    3.  Future Potential (Potencial de SamuBot): Goal: Compare. Visualization: Horizontal Bar Chart. Justification: Effectively compares the impact of different growth vectors. Library: Chart.js. NO SVG.
+    4.  Strategic Value (¿Por qué es estratégico?): Goal: Organize/Show Process. Visualization: HTML/CSS Flowchart. Justification: Illustrates the cause-and-effect path from tool implementation to strategic advantage. Method: HTML/Tailwind CSS. NO SVG/NO MERMAID JS.
+    -->
+    <!-- Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All visuals are pure HTML/CSS/Tailwind or Canvas-rendered by Chart.js. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #f7fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black uppercase" style="color: #3357FF;">SamuBot</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mt-2">El Asistente Virtual que Transforma la Campaña</p>
+        </header>
+
+        <main class="space-y-12 md:space-y-20">
+
+            <section id="problema" class="text-center">
+                <h2 class="text-3xl font-bold mb-2">El Desafío de la Política Actual</h2>
+                <p class="max-w-3xl mx-auto text-gray-400 mb-8">
+                    Las campañas tradicionales luchan por mantener una conexión real y constante con la ciudadanía. SamuBot nace para cerrar esa brecha, respondiendo a tres problemas fundamentales con tecnología e inmediatez.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4" style="border-color: #FF5733;">
+                        <div class="text-4xl mb-3">❓</div>
+                        <h3 class="text-xl font-bold mb-2">Falta de Acceso a Propuestas</h3>
+                        <p class="text-gray-400">La información es confusa o difícil de encontrar. SamuBot ofrece respuestas claras y al instante desde fuentes oficiales.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4" style="border-color: #F1C40F;">
+                        <div class="text-4xl mb-3">📉</div>
+                        <h3 class="text-xl font-bold mb-2">Baja Participación Ciudadana</h3>
+                        <p class="text-gray-400">Es difícil motivar a la gente a participar. SamuBot invita activamente a unirse y proponer a través de canales accesibles como WhatsApp.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4" style="border-color: #33FF57;">
+                        <div class="text-4xl mb-3">🌐</div>
+                        <h3 class="text-xl font-bold mb-2">Desconexión Territorial</h3>
+                        <p class="text-gray-400">Las necesidades de cada región son únicas. SamuBot actúa como un puente, recogiendo ideas y preocupaciones de todo el país.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="beneficios" class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:col-span-1">
+                         <h2 class="text-3xl font-bold mb-4">Un Círculo Completo de Beneficios</h2>
+                        <p class="text-gray-400 mb-6"></p>
+                        <ul class="space-y-3 text-gray-300">
+                            <li><span class="font-bold" style="color: #3357FF;">Modernización:</span> Atrae a nuevos segmentos con tecnología útil.</li>
+                            <li><span class="font-bold" style="color: #FF33A1;">Alcance Ampliado:</span> Llega a cada rincón del país sin movilización física.</li>
+                            <li><span class="font-bold" style="color: #33FF57;">Eficiencia:</span> Optimiza al equipo humano, automatizando respuestas repetitivas.</li>
+                            <li><span class="font-bold" style="color: #F1C40F;">Inteligencia Ciudadana:</span> Recolecta propuestas de valor directamente de la gente.</li>
+                            <li><span class="font-bold" style="color: #FF5733;">Confianza:</span> Construye un vínculo cercano a través de la transparencia.</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-1">
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="benefitsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="potencial">
+                <h2 class="text-3xl font-bold text-center mb-2">Potencial de Crecimiento Exponencial</h2>
+                <p class="max-w-3xl mx-auto text-gray-400 mb-8 text-center">
+                    SamuBot está diseñado para evolucionar. Su arquitectura modular permite no solo escalar a nivel nacional, sino también adaptarse y expandirse con nuevas funcionalidades. El siguiente gráfico compara el impacto potencial de cada área de crecimiento.
+                </p>
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-2xl">
+                     <div class="chart-container h-96 md:h-[450px]">
+                        <canvas id="potentialChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="estrategia">
+                <h2 class="text-3xl font-bold text-center mb-2">De la Herramienta a la Estrategia Ganadora</h2>
+                <p class="max-w-3xl mx-auto text-gray-400 mb-10 text-center">
+                    La implementación de SamuBot es estratégica. Genera un flujo de valor que impacta directamente en la percepción pública y la toma de decisiones, creando una ventaja competitiva decisiva.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+                    <div class="text-center p-6 bg-gray-800 rounded-full w-48 h-48 flex items-center justify-center shadow-lg">
+                        <span class="text-2xl font-bold" style="color: #3357FF;">SamuBot</span>
+                    </div>
+                    <div class="text-5xl font-thin text-gray-600 hidden md:block">&rarr;</div>
+                    <div class="text-5xl font-thin text-gray-600 md:hidden">&darr;</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                            <h4 class="font-bold" style="color: #FF5733;">Imagen Pública Innovadora</h4>
+                            <p class="text-sm text-gray-400">Proyecta accesibilidad y modernidad.</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                             <h4 class="font-bold" style="color: #F1C40F;">Vínculo Ciudadano Fortalecido</h4>
+                            <p class="text-sm text-gray-400">La escucha activa genera lealtad.</p>
+                        </div>
+                         <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                            <h4 class="font-bold" style="color: #33FF57;">Decisiones Basadas en Datos</h4>
+                            <p class="text-sm text-gray-400">Pulso real de la opinión pública.</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                            <h4 class="font-bold" style="color: #FF33A1;">Diferencial Competitivo</h4>
+                            <p class="text-sm text-gray-400">Destaca sobre campañas tradicionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-16 pt-8 border-t border-gray-700">
+            <p class="text-gray-500">🔧 Modernizar Bolivia es posible. Y empieza ahora.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabel(label) {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        function createBenefitsChart() {
+            const ctx = document.getElementById('benefitsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Modernización', 'Alcance Ampliado', 'Eficiencia', 'Inteligencia Ciudadana', 'Confianza'],
+                    datasets: [{
+                        label: 'Beneficios Clave',
+                        data: [20, 20, 20, 20, 20],
+                        backgroundColor: [
+                            '#3357FF',
+                            '#FF33A1',
+                            '#33FF57',
+                            '#F1C40F',
+                            '#FF5733'
+                        ],
+                        borderColor: '#1a202c',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#f7fafc',
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createPotentialChart() {
+            const ctx = document.getElementById('potentialChart').getContext('2d');
+            const rawLabels = [
+                'Escalable a nivel nacional y regional',
+                'Personalizable por tipo de usuario',
+                'Integrable con WhatsApp, Telegram, Web y apps',
+                'Medible con dashboard de métricas en tiempo real',
+                'Módulos futuros: agenda, encuestas, voluntarios'
+            ];
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: rawLabels.map(wrapLabel),
+                    datasets: [{
+                        label: 'Nivel de Impacto Potencial',
+                        data: [95, 85, 90, 88, 75],
+                        backgroundColor: [
+                            'rgba(51, 87, 255, 0.7)',
+                            'rgba(255, 51, 161, 0.7)',
+                            'rgba(51, 255, 87, 0.7)',
+                            'rgba(241, 196, 15, 0.7)',
+                            'rgba(255, 87, 51, 0.7)'
+                        ],
+                        borderColor: [
+                            '#3357FF',
+                            '#FF33A1',
+                            '#33FF57',
+                            '#F1C40F',
+                            '#FF5733'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#f7fafc'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#f7fafc',
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        window.onload = function() {
+            createBenefitsChart();
+            createPotentialChart();
+        };
+    </script>
+</body>
+</html>
